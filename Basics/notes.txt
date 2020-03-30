@@ -1,2 +1,5 @@
 1. To get the Python interpreter installed location in windows
    > where python
+   
+2. indentaion is very important 
+   IndentationError: unindent does not match any outer indentation level
