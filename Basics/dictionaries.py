@@ -4,6 +4,15 @@ Separate keys from values with a colon(:), and a pair from another by a comma(,)
 It isn’t necessary to use the same kind of keys (or values) for a dictionary in Python.
 
 dictionary cannot contain the same key twice.
+
+-> in-built functions
+len() any() all() sorted()
+
+-> in-built methods()
+keys() values() items() get() clear() copy() pop() popitem() fromkeys() udpate()
+
+-> operations
+in , not in
 '''
 crypto = {1: "Bitcoin", 2: "Ethereum", 3: "Litecoin", 4: "Stellar", 5: "XRP"}
 print(type(crypto))
@@ -80,3 +89,22 @@ print(len(crypto))
 crypto.popitem()
 print(len(crypto))
 print(crypto)
+
+
+dict4={1:1,2:2,3:3}
+
+for i in dict4:
+    print(dict4[i]) # values
+
+dict1={4:{1:2,2:4},8:16}
+print(dict1[3])
+
+dict4[2]=4 # update value for existing key
+dict4[4]=6 # adding a new key
+print(dict4)
+
+del dict4[2]
+print(dict4)
+del dict4
+print(type(dict4)) # NameError: name 'dict4' is not defined
+print(dict4) # NameError: name 'dict4' is not defined, as dict4 won't be available
