@@ -1,4 +1,5 @@
-'''             { } or dict()
+'''            
+             { } or dict()
 
 Separate keys from values with a colon(:), and a pair from another by a comma(,). Finally, put it all in curly braces.
 It isn’t necessary to use the same kind of keys (or values) for a dictionary in Python.
