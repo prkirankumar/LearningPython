@@ -1,0 +1,49 @@
+try:
+    pass
+except expression as identifier:
+    pass
+else:
+    pass
+finally:
+    pass
+
+When Python error and exceptions occur, it prints a four-line message on the screen, if not handled.
+The first line declares that this is a traceback. This means that the interpreter traces the Python exception back to its source.
+The second tells us the line number for the code that caused the Python exception. In our case, it is line 1. #208 means this is the 208th statement we’re running in the interpreter since we opened it.
+The third line tells us which line (the statement that) caused the Python exception.
+Finally, the fourth line tells us the type of Python exception that occurred. This is accompanied by a short description of what happened.
+
+
+When the interpreter encounters an exception, it checks the except blocks associated with that try block. These except blocks may 
+declare what kind of exceptions they handle. When the interpreter finds a matching exception, it executes that except block.
+
+you can’t put a statement between try and catch blocks.
+
+FAQ 
+* difference between else: and finally:
+
+Python's Exception Hierarchy ( few only mentioned)
+
+-BaseException
+    -Exception
+       -AssertionError 
+       -AttributeError
+       -ArithmeticError
+           -ZeroDivisionError
+           -FloatingPoint
+           -OverflowError
+       -EOFError
+       -NameError
+       -LookupError
+           -IndexError
+           -KeyError
+       -OSError
+           -FileNotFoundError
+           -InterruptedError
+           -PermissionError
+           -TimeOutError
+       -TypeError
+       -ValueError
+    -SystemExit
+    -GeneratorExit
+    -KeyboardInterrupt
