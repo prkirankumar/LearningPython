@@ -160,9 +160,8 @@ def my_func23(x):
     global var # take the value from global variable
     print(x * var)
     var = 12
-	
-my_func23(10)
 
+my_func23(10)
 
 def test_var_args(f_arg, *argv):
     print "first normal arg:", f_arg
