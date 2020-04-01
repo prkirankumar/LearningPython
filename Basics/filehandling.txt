@@ -1,0 +1,90 @@
+f.seek(int)
+Change the current file position to x, and return the rest of the line:
+
+f.tell()
+The tell() method returns the current file position in a file stream.
+You can change the current file position with the seek() method.
+
+
+
+Mode	Description
+r	    To read a file (default)
+w	    To write a file; Creates a new file if it doesn’t exist, truncates if it does
+x	    Exclusive creation; fails if a file already exists
+a	    To append at the end of the file; create if doesn’t exist
+t	    Text mode (default)
+b	    Binary mode
++	    To open a file for updating (reading or writing)
+
+
+Encoding 
+It is good practice to specify what encoding we want, because different systems use a different encoding. 
+While Windows uses ‘cp1252’, Linux uses ‘utf-8’.
+
+todo=open('test.txt',mode='r',encoding='utf-8')
+
+We can simply use a for-loop to iterate on a file. This is the beauty of Python- it simplifies everything.
+
+for line in open('test.txt'):
+    print(line,end='')
+
+File Methods in Python
+
+* close() - close a file to free up the resources held by it
+    f.close()
+  you must always close a file after you're done working with it.
+
+* detach() -   detaches the underlying binary buffer from TextIOBase and returns it.
+    f.detach()
+    f.read() 
+    
+    File "file_operations.py", line 82, in <module>
+    print(f.read())
+    ValueError: underlying buffer has been detached
+
+    After detaching from the buffer, when we try to read the file, it raises a ValueError.
+
+* fileno() - file descriptor of the file. This is an integer number.
+
+* flush() - flush() writes the specified content from the program buffer to the operating system buffer in event of a power cut.
+
+    f.flush()
+
+* seekable - returns True if the file stream supports random access.
+    f.seekable()
+
+* tell(), 
+
+* truncate() - resizes the file. You must open your file in a writing mode for this.
+    f.truncate()
+
+* write(s) -  takes string ‘s’, and writes it to the file. Then, it returns the number of characters written.
+    f.write("string")
+
+* read() - read n characters from a file.
+    f.read() # reads all characters
+    f.read(5) # reads first 5 characters
+
+* readline() -  reads the next line
+    f.readline()
+    f.readline(4)
+    f.readline(-1)
+
+* readable() - returns True if the object is readable.
+    f.readable()
+
+* isatty() - returns True if the file is connected to a tty-like device.
+    f.isatty()
+
+* seek() - reposition the cursor to the specified position.
+    f.seek(4)
+
+* readlines() -  reads the rest of the lines.
+    f.readlines(4) # reads from 4th line
+
+* writeable() - returns True if the stream can be written to
+    f.writeable()
+
+ * writelines() - writelines() writes a list of lines to a file.
+    f.writelines([‘\nPython’,’\nC#’,’\nJavaScript’]))
+
