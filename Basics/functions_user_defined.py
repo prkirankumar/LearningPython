@@ -162,3 +162,11 @@ def my_func23(x):
     var = 12
 	
 my_func23(10)
+
+
+def test_var_args(f_arg, *argv):
+    print "first normal arg:", f_arg
+    for arg in argv:
+        print "another arg through *argv :", arg
+test_var_args('C#','Python','Go','Scala')
+   
