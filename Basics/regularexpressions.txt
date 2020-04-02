@@ -1,0 +1,72 @@
+Metacharacter	Description
+
+^	            Matches the start of the string
+
+.	    Matches a single character, except a newline
+        But when used inside square brackets, a dot is matched
+
+[ ]	    A bracket expression matches a single character from the ones inside it
+        [abc] matches ‘a’, ‘b’, and ‘c’
+        [a-z] matches characters from ‘a’ to ‘z’
+        [a-cx-z] matches ‘a’, ’b’, ’c’, ’x’, ’y’, and ‘z’
+
+[^ ]	Matches a single character from those except the ones mentioned in the brackets[^abc] matches all characters except ‘a’, ‘b’ and ‘c’
+
+( )	    Parentheses define a marked subexpression, also called a block, or a capturing group
+
+\t, \n, \r, \f	Tab, newline, return, form feed
+
+*	    Matches the preceding character zero or more times
+        ab*c matches ‘ac’, ‘abc’, ‘abbc’, and so on
+        [ab]* matches ‘’, ‘a’, ‘b’, ‘ab’, ‘ba’, ‘aba’, and so on
+
+        (ab)* matches ‘’, ‘ab’, ‘abab’, ‘ababab’, and so on
+
+{m,n}	Matches the preceding character minimum m times, and maximum n times
+        a{2,4} matches ‘aa’, ‘aaa’, and ‘aaaa’
+
+{m}	    Matches the preceding character exactly m times
+
+?	    Matches the preceding character zero or one times
+        ab?c matches ‘ac’ or ‘abc’
+
++	    Matches the preceding character one or one times
+        ab+c matches ‘abc’, ‘abbc’, ‘abbbc’, and so on, but not ‘ac’
+
+|	    The choice operator matches either the expression before it, or the one after
+        abc|def matches ‘abc’ or ‘def’
+
+\w	    Matches a word character (a-zA-Z0-9)
+
+\W      matches single non-word characters
+
+\b	    Matches the boundary between word and non-word characters
+
+\s	    Matches a single whitespace character
+
+\S      matches a single non-whitespace character
+
+\d	    Matches a single decimal digit character (0-9)
+
+\	    A single backslash inhibits a character’s specialness
+        Examples- \.    \\     \*
+        When unsure if a character has a special meaning, put a \ before it: \@
+
+$	    A dollar matches the end of the string
+
+-----------------------------------------------------------------------------------------------------------------------
+Regular Expression Functions
+
+* match() : takes two arguments- a pattern and a string. If they match, it returns the string. Else, it returns None.
+            print(re.match('center','centre'))
+
+* search() : takes two arguments- the pattern and the string to be searched.
+            match=re.search('aa?yushi','ayushi')
+            match.group()
+
+* findall() : returns a list of all matches found.
+                match=re.findall(r'advi[cs]e','I could advise you on your poem, but you would disparage my advice')
+    
+                for i in match:
+                     print(i)
+
