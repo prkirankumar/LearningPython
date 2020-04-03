@@ -2,6 +2,7 @@
 The Epoch is the point in time in Python from which time is measured. It is labelled 12:00AM, Jan 1, 1970. It is the beginning of an era.
 
 '''
+import os
 import datetime
 import time
 import calendar
@@ -46,3 +47,86 @@ print(calendar.prmonth(2020,4)) # for month
 print(calendar.weekday(2020,4,5))
 
 print(calendar.timegm(time.localtime()))
+
+
+os.system("cls")
+print("----- calendar -----")
+print(calendar.Calendar(firstweekday=0))
+
+c=calendar.Calendar(firstweekday=1)
+for i in c.iterweekdays():
+    print(i)
+
+c=calendar.Calendar(firstweekday=0)
+for i in c.itermonthdates(2019,12):
+    print(i)
+
+for i in c.itermonthdays(2018,12):
+    print(i)
+
+for i in c.itermonthdays2(2018,12):
+    print(i)
+
+for i in c.itermonthdays3(2018,12):
+    print(i)
+
+for i in c.itermonthdays4(2018,12):
+    print(i)
+
+for i in c.monthdatescalendar(2018,12):
+    print(i)
+
+for i in c.monthdays2calendar(2018,12):
+    print(i)
+
+for i in c.monthdayscalendar(2018,12):
+        print(i)
+
+for i in c.yeardatescalendar(2018,2):
+    print(i)
+
+for i in c.yeardays2calendar(2018,2):
+    print(i)
+
+for i in c.yeardayscalendar(2018,2):
+    print(i)
+
+t=calendar.TextCalendar(0)
+print(t.formatmonth(2018,12))
+
+print(t.prmonth(2018,12))
+
+print(t.formatyear(2018,5)) #sets w=5 and m is 3 by default
+print(t.formatyear(2018,m=5))
+
+print(t.pryear(2018,m=5))
+
+# html calendar
+os.system("cls")
+
+h=calendar.HTMLCalendar()
+print(h.formatmonth(2018,12)) # formatmonth(theyear,themonth,withyear=True)
+
+print(h.formatyear(2018,5)) # year width
+
+print(h.formatyearpage(2018,css=None)) # formatyearpage(theyear,width=3,css=’calendar.css’,encoding=None)
+
+t.setfirstweekday(calendar.SUNDAY)
+print(t.formatyear(2018,5))
+print(t.firstweekday)
+print(calendar.isleap(2020))
+print(calendar.leapdays(1990,2020))
+print(calendar.weekday(2018,12,31))
+print(calendar.weekheader(1))
+print(calendar.weekheader(2))
+print(calendar.weekheader(3))
+
+print(calendar.monthrange(2018,12))
+
+for i in calendar.monthcalendar(2018,12):
+    print(i)
+
+print(calendar.prmonth(2018,12))
+print(calendar.month(2018,12))
+print(calendar.prcal(2018))
+print(calendar.calendar(2020))
