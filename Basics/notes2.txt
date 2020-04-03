@@ -105,7 +105,7 @@ If we want to install non-fault Python module in Windows then
             print(a)
             print(b)
         blue()
-        print(a)             
+        print(a)                
 
 # ternary operator
 

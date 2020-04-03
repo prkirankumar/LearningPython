@@ -3,6 +3,13 @@
 
    To get the version 
    python --version
+
+   pip list
+   pip freeze # returns packages with version
+   pip install numpy
+   pip install –upgrade numpy # to upgrade the installed packages
+   pip uninstall numpy
+   pip show numpy
    
 2. indentaion is very important 
    IndentationError: unindent does not match any outer indentation level
