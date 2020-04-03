@@ -92,3 +92,18 @@ print(f.readable())
 print(f.readline())
 print(f.readline(4))
 print(f.readline(-1))
+
+###############################
+# remove unwanted text from a file name and replace file
+
+def replace(folder_path):
+    for path, files in os.walk(folder_path):
+        for name in files:
+                file_path = os.path.join(path,name)
+                file_path_updated=file_path.replace("unwanted text","")
+                os.rename(file_path, file_path_updated)
+            
+replace("C:\\MyFolder")
+              
+
+                
