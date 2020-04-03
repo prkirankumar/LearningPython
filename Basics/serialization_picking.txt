@@ -1,0 +1,40 @@
+'''
+when we want to serialize and de-serialize a Python object, we use functions and methods from the module Python Pickle. 
+Pickling, then, is the act of converting a Python object into a byte stream. We also call this ‘serialization’, ‘marshalling’, 
+or ‘flattening’. Unpickling is its inverse, ie., converting a byte stream from a binary file or bytes-like object into an object. 
+
+‘marshal’ is a more primitive module for serialization in Python, and its purpose is to support .pyc files. However, we prefer Python pickle. The two differ in the following ways:
+
+* Python pickle tracks the objects it has serialized. Because of this, it doesn’t have to serialize the same objects again when it
+  references them again. This is unlike marshal.
+* marshal cannot serialize user-defined classes and their instances. If the class definition is importable and in the same module
+  as when we stored the object, pickle can save and restore class instances.
+* The serialization format for pickle in Python is backwards-compatible. This isn’t the same with marshal.
+
+Python pickle uses a Python-specific data format. So, external standards like JSON or XDR impose no restrictions. 
+But this makes for inability of non-Python programs to reconstruct pickled Python objects.
+
+
+Complementary to Python pickle is the module ‘pickletools’ for analyzing data streams that it generates.
+
+We have five different protocols for pickling:
+
+Protocol version 0: Original, human-readable protocol; backwards-compatible with earlier versions of Python.
+Protocol version 1: Old, binary format; compatible with earlier versions of Python.
+Protocol version 2: Added in Python 2.3; provides more efficient pickling of new-style classes.
+Protocol version 3: Introduced in Python 3.0; default; supports bytes objects; cannot be unpickled by Python 2.x. 
+                    It is recommended when we need compatibility with other Python 3 versions.
+Protocol version 4: Introduced in Python 3.4; supports very large objects, more kinds of objects, and certain data format optimizations.
+
+To serialize and deserialize, we use functions dumps() and loads(), respectively. Alternatively, 
+we can create our own Pickler and Unpickler objects for more control over this.
+
+dump(obj, file, protocol=None, *, fix_imports=True)
+dumps(obj, protocol=None, *, fix_imports=True)
+load(file, *, fix_imports=True, encoding=”ASCII”, errors=”strict”)
+loads(bytes_object, *, fix_imports=True, encoding=”ASCII”, errors=”strict”)
+
+PickleError
+PicklingError
+UnpicklingError
+'''
