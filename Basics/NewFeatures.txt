@@ -1,0 +1,24 @@
+PEP stands for Python Enhancement Proposal. A PEP is a design document providing information to the Python community, or describing
+a new feature for Python or its processes or environment
+
+3.8 
+
+* walrus operator (:=)
+  Allows you to assign variables inside an expression. 
+  The major benefit of this is to save you some lines of code and you can write even cleaner and compact code in Python
+
+  num = [1,2,3,4,5]
+  if( (size:=len(num1)) < 10 ):
+    print(f”Length of list is small, size={size}”)
+
+    Item = getItem()
+    while Item:
+        do_something(item)
+        Item = getItem()
+    
+    can be replaced with
+
+    while Item:= getItem():
+        do_something(Item)
+
+* Positional only arguments

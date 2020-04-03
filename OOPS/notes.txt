@@ -1,0 +1,33 @@
+
+class ClassOne(object): #creating a class which inherts from the default "object" class, from Python 3 & above it is not necessary to use object
+    def __init__(self, p1, p2): # "self" is a reference to the current instance of the class
+        self.p1 = p1 
+        self.p2 = p2
+    
+    def square(self, p3):
+        print(p3 ** 2)
+
+def __int(self,parammeters): 
+class constructor; initializing some variables and the method is called whenever you create a new instance of the class   
+
+
+obj=ClassOne(2,10)
+#creating an object by simply calling the class name and entering the arguments required by the __init__ method in between parentheses 
+
+obj.p1
+#accessing the object's attributes
+
+obj.square(4)
+
+
+getattr(obj, "p1") #getting the value of an attribute 
+ 
+setattr(obj, "ios", "12.1") #setting the value of an attribute 
+ 
+hasattr(obj, "p1") #checking if an object attribute exists 
+ 
+delattr(obj, "p1") #deleting an attribute 
+
+
+isinstance(obj, ClassOne) #verifying if an object is an instance of a particular class 
+ 

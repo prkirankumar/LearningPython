@@ -1,0 +1,117 @@
+Comments
+
+# for single line comment
+
+'''
+    for multiline comments
+'''
+"""
+    for multiline comments
+"""
+
+
+
+multiline statement :  using the ‘\’ character
+   "Welcome to\
+    Python\
+    Programming "
+
+multiple statements in one line
+
+    a=10; b=20
+    if x>5 : print("hello")
+
+for string we use single or double quotes ( '' or "")
+
+input("Please enter the string you want to be printed out: ") 
+obj = input("Please enter the string you want to be printed out: ") 
+
+* Conversion between data types
+ 
+    str() - converts to a string
+    int() - converts to an integer
+    float() - converts to a float
+    list() - converts to a list
+    tupe() - converts to a tuple
+    set() - converts to a set
+    bin() - converts to a binary representation
+    hex() - converts to a hexadecimal representation
+    
+    int(variable,2) - converts from binary back to decimal
+    int(variable,16) - converts from hexadecimal back to decimal
+
+if condition:
+    statements
+elif condition:
+    statements
+else:
+    statements
+
+for item in items:   # iterates over a sequence and execute the indented each element in the sequence
+    statements
+else:  # below "else" will be executed when "for" has finished looping over the entire list
+    statements
+
+while condition:
+    statements
+else:
+    statements
+
+
+break : stops the execution and quits current loop
+continue : ignores the rest of the code below for the current iteration, 
+            then goes up to the top of the loop and starts the next iteration
+pass : equivalent to "do nothing"; it is actually a placeholder for when you want to write a piece of code that you will treat later
+
+
+try:
+except:
+else:
+finally:
+
+## Modules 
+
+import sys 
+    - importing the sys modulel; the import statements hsould be place before any other code in our application
+
+from math import sin
+    - imports only a function (sin()) from the math module;
+      there's no need to add the parantheses of the function when importing it
+
+from math import *
+    - importing all the names (variables and functions) from the math module
+
+
+If we want to install non-fault Python module in Windows then 
+    pip install modulename
+# Python Installation Platform (pip)
+
+# multiple assignments
+
+    age,city=21,'Indore'
+
+# string formatters
+ print("I  just printed {x} pages to the printer {printer}".format(x=7, printer="Dell"))
+
+
+
+# nonlocal
+    def red():
+        a=1
+        def blue():
+            nonlocal a
+            a=2
+            b=2
+            print(a)
+            print(b)
+        blue()
+        print(a)             
+
+# ternary operator
+
+    [on_true] if [expression] else [on_false]
+    a,b= 1,2
+    res="a" if a>b else "b"
+    print(res)
+
+# Python doesn't have switch statement  

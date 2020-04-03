@@ -1,0 +1,20 @@
+Pandas (Data Analysis)
+Numpy (Numeric and scientific calculations)
+Matplotlib, Seaborn (Data Visualizations)
+Scikit-learn (Machine Learning)
+Tensorflow, Keras (Machine & Deep Learning)
+
+* Web Development
+  Django, Pyramid, Flask
+
+* Artificial Intelligence
+ NLTK (Natural Language Too Kit for NLP)
+ OpenCV 
+ Keras (Deep Learning)
+ Microsoft Cognitive Took Kit - Deep learning framework
+
+ * Automation
+  Robot Framewokr
+  PyTest
+  Selenium Python
+  PyUnit

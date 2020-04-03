@@ -1,3 +1,11 @@
+# Lambda / Anonymous functions
+
+"""
+lambda arg1, arg2, ..., arg n: an expression using the arguments #general syntax 
+
+a = lambda x, y: x * y #defining a lambda function 
+
+"""
 lam = lambda x, y: x * y
 
 print(lam(2, 5))
