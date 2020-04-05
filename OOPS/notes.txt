@@ -1,3 +1,13 @@
+Encapsulation is the bundling of data and the methods that act on that data such that access to that data is restricted from outside the bundle
+It means that a class publishes methods and attributes "only what are needed" for others to use it.
+
+Getter - returns the value of the instance attribute
+Setter - set or change the value of the instance attribute
+
+Use @property decorator in order to create a getter method and @<property_name>.setter in order to create a setter in Python
+
+
+In Python every object is public 
 
 class ClassOne(object): #creating a class which inherts from the default "object" class, from Python 3 & above it is not necessary to use object
     def __init__(self, p1, p2): # "self" is a reference to the current instance of the class
@@ -31,3 +41,4 @@ delattr(obj, "p1") #deleting an attribute
 
 isinstance(obj, ClassOne) #verifying if an object is an instance of a particular class 
  
+
