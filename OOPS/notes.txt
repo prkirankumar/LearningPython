@@ -41,4 +41,24 @@ delattr(obj, "p1") #deleting an attribute
 
 isinstance(obj, ClassOne) #verifying if an object is an instance of a particular class 
  
+Inheritance allows programmers to create classes that are built upon existing classes
+A class can inherit from another class, which means that in addition to its own attributes and methods.
+it also obtain those fromthe class from which it inherits.
 
+A derived / child class is a class created from another existing class, while 
+a base / parent class is a class from which other classes are derived.
+
+super() : It allows us to call a method from the parent class
+
+
+Python doesn't support method overloading when compared to other OO languages.
+
+def product(a, b): 
+    p = a * b 
+    print(p) 
+      
+def product(a, b, c): 
+    p = a * b*c 
+    print(p) 
+
+But Python interpreter will use latest method only.

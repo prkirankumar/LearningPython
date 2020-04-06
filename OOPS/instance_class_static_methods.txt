@@ -1,0 +1,9 @@
+instance method (self): the object instance is implicitly passed as the first argument. 
+This argument is called "self" and through this argument we have access to the instance of the class
+
+class method (@classmethod) : instead of the self, the class of the object instance is implicitly passed as the first argument.
+This argument is  called "cls" and through this argument we have access to class itself.
+we can create alternative consturctor using the classmethod
+
+static method (@staticmethod) : no argument is implicitly passed to the method. 
+This methods should be logically related to the class.  
