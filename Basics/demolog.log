@@ -1,0 +1,10 @@
+2020-04-07 03:25:36,445 You are warned with timestamp
+2020-04-07 03:25:36,446 Service before self
+2020-04-07 03:33:10,576 : WARNING : 39 You are warned with timestamp
+2020-04-07 03:33:10,576 : WARNING : 40 Service before self
+04/07/2020 03:35:53 AM : WARNING : 40 You are warned with timestamp
+04/07/2020 03:35:53 AM : WARNING : 41 Service before self
+User : user@domain.com 04/07/2020 03:39:27 AM : WARNING : 45 You are warned with timestamp
+User : user@domain.com 04/07/2020 03:40:12 AM : WARNING : 43 You are warned with timestamp
+User : user@domain.com 04/07/2020 03:40:27 AM : WARNING : 43 You are warned with timestamp
+User : user@domain.com 04/07/2020 03:40:27 AM : WARNING : 44 Service before self
