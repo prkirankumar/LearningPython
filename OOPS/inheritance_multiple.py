@@ -43,3 +43,16 @@ class C(B, A):  # for class C(A,B  getting method inconsistency resolution order
 print(C.mro())
 c=C()
 print(c.which_class())
+
+ # 
+class AA:
+    id=1            
+class BB:
+    id=2             
+class CC:
+    id=3              
+class M(AA,CC,BB):
+    pass
+
+print(M.id) # 1 as base class is being called first
+print(M.mro())
