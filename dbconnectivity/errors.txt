@@ -1,0 +1,18 @@
+I was getting below error initially. Couldn't able to fix the issue on the same day. It took 2 days.
+
+cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library
+
+Analysis: 
+
+I was having two Python 3.8 and Anaconda ( Python base 3.7 of conda). 
+
+When ever i am installing 
+pip install cx-Oracle, it was getting installed (pip from python 3.8). While interpreting the applicaiton I was getting below error.
+
+Unable to import 'cx_Oracle' pylint (import-error)
+
+The problem was with my VSCode IDE where it was mapped to conda's python.
+
+Solution:
+
+I need to install the cx-Oracle again using pip under C:\Anaconda3\Scripts
