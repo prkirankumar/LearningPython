@@ -6,11 +6,11 @@ Setter - set or change the value of the instance attribute
 
 Use @property decorator in order to create a getter method and @<property_name>.setter in order to create a setter in Python
 
-
+***** Methods which starts and ends with __ (double _ ) are called "dunder" or " magic" methods.   # https://www.geeksforgeeks.org/dunder-magic-methods-python/
 In Python every object is public 
 
 class ClassOne(object): #creating a class which inherts from the default "object" class, from Python 3 & above it is not necessary to use object
-    def __init__(self, p1, p2): # "self" is a reference to the current instance of the class
+    def __init__(self, p1, p2): # "self" is a reference to the current instance of the class 
         self.p1 = p1 
         self.p2 = p2
     
